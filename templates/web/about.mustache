@@ -1,0 +1,62 @@
+{{>header}}
+
+  <div id="content">
+
+    <h3>How to use it?</h3>
+
+    <h4>Create a secret link</h4>
+    <p>When you want to share your secret with someone, you have 2 options:
+    <ol>
+        <li>Simple text</li>
+        <ul>
+        <li>Manualy write or paste your secret into the text area</li>
+        <li>Enter a mandatory passphrase</li>
+        <li>Press the Create a secret link button</li>
+        </ul>
+        <li>Text file upload</li>
+        <ul>
+        <li>Press the "select a secret file to upload" button</li>
+        <li>Choose your local secret file</li>
+        <li>Enter a mandatory passphrase</li>
+        <li>Press the Create a secret link button</li>
+        </ul>
+
+    </ol>
+    </p>
+
+    <h4>Registered vs non registered users</h4>
+    <p>Creating an account and registering to the system enables you to give a bigger ttl of 14 days to the secret, as well as allowing you to provide a recepient email for the secret link to be automaitically sent to when pressing the secret creation button.
+    If you are not registered when creating a secret link you will have to manually copy it and send it in some other was to your recepient (mail,slack..)</p>
+
+    <h4>Password generator</h4>
+    <p>When you want to generate a password based on our password policy (A-Z, a-z 0-9 without special charachters, length 16) you can do so by pressing the "generate a random passowrd" button, and the generate password will be presenteds as a notification to the screen,
+    If you are pleased with the outcome, just copy past it to the secret text area and procced with providing a passphrase and then pressing the "Create a secret link" button.</p>
+
+    <h3>F.A.Q.</h3>
+
+    <h4>Why would I use this?</h4>
+    <p>When you send people passwords and private links via email or chat, there are copies of that information stored in many places. If you use a one-time link instead, the information persists for a single viewing which means it can't be read by someone else later. This allows you to send sensitive information in a safe way knowing it's seen by one person only. Think of it like a self-destructing message.</p>
+
+    <h4>Why can't I send pictures or other kinds of files?</h4>
+    <p>The challenge with sending files, images in particular, is that there's no way to absolutely guarantee it wasn't copied or shared with other people. In order to ensure that no one's private information is unknowingly shared, we decided to err on the side of simplicity.</p>
+
+    <h4>But I can copy the secret text. What's the difference?</h4>
+    <p>True but all you have is text. With images and other files types, they can contain metadata and other potentially revealing information about who the sender or recipient. Again, this is simply to ensure that no private information is shared outside of the intended recipient.</p>
+
+    <h4>Can I retrieve a secret that has already been shared?</h4>
+    <p>Nope. We display it once and then delete it. After that it's gone forever.</p>
+
+    <h4>How long do you keep non-viewed secrets?</h4>
+    <p>We keep secrets for up to {{anonymous.ttl}} days for anonymous users and up to {{default_plan.ttl}} days for <a href="/signup">free accounts</a>. After that they are deleted automatically and gone forever. (Note: by the time you read a secret, it's already deleted from our servers.)</p>
+
+    <h4>What is the maximum message size?</h4>
+    <p>The maximum size is {{anonymous.size.to_bytes}} for anonymous users, {{default_plan.size.to_bytes}} for <a href="/signup">free accounts</a>, and more for paid.</p>
+
+    <h4>Why should I trust you?</h4>
+    <p>General we can't do anything with your information even if we wanted to (which we don't). If it's a password for example, we don't know the username or even the application that the credentials are for.</p>
+    <p>If you include a passphrase (available under "Privacy Options"), we use it to encrypt the secret. We don't store the passphrase (only a bcrypted hash) so we can never know what the secret is because we can't decrypt it.</p>
+    <p>Beside all that, the code is <a href="https://github.com/onetimesecret/onetimesecret">opensource</a> so you can review the code and/or run your own instance.</p>
+
+  </div>
+
+{{>footer}}
