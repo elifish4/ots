@@ -2,7 +2,7 @@
 
 FROM debian:stretch
 
-MAINTAINER eli fish <eli.fish@appsflyer.com>
+MAINTAINER eli fish <elifish4@gmail.com>
 
 # Install dependencies
 RUN DEBIAN_FRONTEND=noninteractive \

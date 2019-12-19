@@ -13,16 +13,16 @@
   - CHANGEME@EXAMPLE.com
 :emailer:
   :mode: :sendgrid
-  :account: devops@appsflyer.com
+  :account: elifish4@gmail.com
   :password: fish
-  :from: eli.fish@appsflyer.com
+  :from: elifish4@gmail.com
   :fromname: eli
   :bcc:
 # Use the following email config to enable SMTP
 # support and remove the :emailer config above.
 #:emailer:
   #  :mode: :smtp
-  #  :from: eli.fish@appsflyer.com
+  #  :from: elifish4@gmail.com
   #  :host: localhost
   #  :port: 587
   #  :tls: true

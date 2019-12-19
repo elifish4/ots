@@ -93,7 +93,7 @@ module Onetime
           emailer.fromname = self[:from_name]
         else
           self[:from_name] = 'Eli'
-          self[:signature_link] = 'http://appsflyer.com/'
+          self[:signature_link] = 'http://yourcompany.com/'
           emailer.fromname = 'One-Time Secret'
           self[:from] = cust.custid
         end
